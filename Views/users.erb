@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <p>
+      Sign up
+    </p>
+    <form action="/sign_up/users" method="post">
+      <input name="user_id" />
+      <input type="submit" />
+    </form>
+   <% if @users_list %>
+      <ol>
+        <% @users_list.each do |user_id| %>
+          <li><%= user_id %></li>
+        <% end %>
+      </ol>
+    <% end %>
+  </body>
+</html>

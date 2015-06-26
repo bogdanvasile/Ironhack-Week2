@@ -1,0 +1,29 @@
+<html>
+  <body>
+    <p>
+     Please add things to do
+    </p>
+    <form action="/add_task" method="post">
+      <p>Add task</p><input name="name" />
+      <input type="submit" />
+    </form>
+    <% if @tasks %>
+    <% @tasks.each do |task| %>
+   <ul>
+    <li><%= task.name %></li>
+    <%= task.date %>
+
+    <form action="/mark_done" method="post">
+     <button type="submit" value="done">Mark done</button>
+     <form action="/delete" method="post">
+     <button type="submit" value="delete">Delete</button>
+     </ul>
+    </form>
+    </form>
+      <% if task.done %>
+      <%= delete %>
+   <% end %>
+   <% end %>     
+   <% end %>
+  </body>
+</html>

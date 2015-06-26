@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <p>
+      Available operations are add, subtract, multiply and divide.
+    </p>
+
+   
+    <p>Which numbers would you like to add?<p>
+    <form action="/save_addition" method="post">
+      <input name="number" />
+      <input name="sec_number" />
+      <input type="submit" />
+    </form>
+     
+     <% if @result %>
+     <%= @result %>
+     <% end %>
+     <p>Which numbers would you like to subtract?<p>
+     <form action="/save_subtraction" method="post">
+      <input name="number" />
+      <input name="sec_number" />
+      <input type="submit" />
+    </form>
+
+     <% if @result_s %>
+     <%= @result_s %>
+     <% end %>
+     <p>Which numbers would you like to multiply?<p>
+     <form action="/save_multiplication" method="post">
+      <input name="number" />
+      <input name="sec_number" />
+      <input type="submit" />
+    </form>
+
+     <% if @result_m %>
+     <%= @result_m %>
+     <% end %>
+     <p>Which numbers would you like to divide?<p>
+     <form action="/save_div" method="post">
+      <input name="number" />
+      <input name="sec_number" />
+      <input type="submit" />
+    </form>
+
+     <% if @result_d %>
+     <%= @result_d %>
+     <% end %>
+
+  </body>
+</html>

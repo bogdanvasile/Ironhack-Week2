@@ -1,0 +1,57 @@
+<html>
+  <body>
+    <p>
+      We would like to know more about you, please fill in the form below:
+    </p>
+    <form action="/sign_up" method="post">
+      <p>First Name</p><input name="name" />
+      <p>Last Name</p><input name="surnames" />
+      <p>Birthday</p><input name="birthday" />
+      <p>Website</p><input name="website" />
+      <p>Number of Dogs</p><input name="number_of_dogs" />
+      <p>Programming Experience</p><input name="first_programming_experience" />
+      <input type="submit" />
+    </form>
+    <table cellpadding="8">
+     <tr>
+   <th>Student Website</th>
+   <th>Student First Name</th>
+   <th>Student Last Name</th>
+   <th>Student Birthday</th>
+   <th>Number of dogs</th>
+   <th>Programming experience</th>
+   </tr>
+    <% if @students %>
+   <% @students.each do |student| %>
+   <tr>
+   <td><a href=<%= student.website %>>Website</a></td>
+   <td><%= student.name %></td>
+   <td><%= student.surnames %></td>
+   <td><%= student.birthday %></td>
+   <td><%= student.number_of_dogs %></td>
+   <% end %>
+   <% end %>
+   <% if @students %>
+   <% @students.each do |student| %>
+   <% if @students %>
+   <% @students.each do |student| %>
+   <% if @students %>
+   <% @students.each do |student| %>
+   <% if @students %>
+   <% @students.each do |student| %>
+   <% if @students %>
+   <% @students.each do |student| %>
+   </tr>
+   </table>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+   <% end %>
+  </body>
+</html>
